@@ -29,7 +29,7 @@ data0 = i2c.readBytes(0x6A, 0x28, 1)
 data1 = i2c.readBytes(0x6A, 0x29, 1)
 
 # Convert the data
-xGyro = data1 * 256 + data0
+xGyro = data1[0] * 256 + data0[0]
 if xGyro > 32767 :
 	xGyro -= 65536
 
@@ -40,7 +40,7 @@ data0 = i2c.readBytes(0x6A, 0x2A, 1)
 data1 = i2c.readBytes(0x6A, 0x2B, 1)
 
 # Convert the data
-yGyro = data1 * 256 + data0
+yGyro = data1[0] * 256 + data0[0]
 if yGyro > 32767 :
 	yGyro -= 65536
 
@@ -51,7 +51,7 @@ data0 = i2c.readBytes(0x6A, 0x2C, 1)
 data1 = i2c.readBytes(0x6A, 0x2D, 1)
 
 # Convert the data
-zGyro = data1 * 256 + data0
+zGyro = data1[0] * 256 + data0[0]
 if zGyro > 32767 :
 	zGyro -= 65536
 
@@ -86,7 +86,7 @@ data0 = i2c.readBytes(0x1E, 0x28, 1)
 data1 = i2c.readBytes(0x1E, 0x29, 1)
 
 # Convert the data
-xAccl = data1 * 256 + data0
+xAccl = data1[0] * 256 + data0[0]
 if xAccl > 32767 :
 	xAccl -= 65536
 
@@ -97,7 +97,7 @@ data0 = i2c.readBytes(0x1E, 0x2A, 1)
 data1 = i2c.readBytes(0x1E, 0x2B, 1)
 
 # Convert the data
-yAccl = data1 * 256 + data0
+yAccl = data1[0] * 256 + data0[0]
 if yAccl > 32767 :
 	yAccl -= 65536
 
@@ -108,7 +108,7 @@ data0 = i2c.readBytes(0x1E, 0x2C, 1)
 data1 = i2c.readBytes(0x1E, 0x2D, 1)
 
 # Convert the data
-zAccl = data1 * 256 + data0
+zAccl = data1[0] * 256 + data0[0]
 if zAccl > 32767 :
 	zAccl -= 65536
 
@@ -119,7 +119,7 @@ data0 = i2c.readBytes(0x1E, 0x08, 1)
 data1 = i2c.readBytes(0x1E, 0x09, 1)
 
 # Convert the data
-xMag = data1 * 256 + data0
+xMag = data1[0] * 256 + data0[0]
 if xMag > 32767 :
 	xMag -= 65536
 
@@ -130,7 +130,7 @@ data0 = i2c.readBytes(0x1E, 0x0A, 1)
 data1 = i2c.readBytes(0x1E, 0x0B, 1)
 
 # Convert the data
-yMag = data1 * 256 + data0
+yMag = data1[0] * 256 + data0[0]
 if yMag > 32767 :
 	yMag -= 65536
 
@@ -141,7 +141,7 @@ data0 = i2c.readBytes(0x1E, 0x0C, 1)
 data1 = i2c.readBytes(0x1E, 0x0D, 1)
 
 # Convert the data
-zMag = data1 * 256 + data0
+zMag = data1[0] * 256 + data0[0]
 if zMag > 32767 :
 	zMag -= 65536
 
