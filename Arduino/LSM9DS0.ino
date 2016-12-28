@@ -1,7 +1,7 @@
 // Distributed with a free-will license.
 // Use it any way you want, profit or free, provided it fits in the licenses of its associated works.
 // LSM9DSO
-// This code is designed to work with the TCS3414_I2CS I2C Mini Module available from ControlEverything.com.
+// This code is designed to work with the LSM9DS0_I2CS I2C Mini Module available from ControlEverything.com.
 // https://www.controleverything.com/content/Accelorometer?sku=LSM9DS0_I2CS#tabs-0-product_tabset-2
 
 #include<Wire.h>
